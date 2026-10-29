@@ -1,0 +1,11 @@
+.git
+.venv
+.env*
+artifacts
+node_modules
+frontend/node_modules
+__pycache__
+.pytest_cache
+*.sqlite*
+data
+models

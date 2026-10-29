@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools==84.2.1"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,9 +7,21 @@ name = "masklab"
 version = "0.1.0.dev0"
 description = "A reproducible behavioral research workbench for persona and framing studies"
 readme = "README.md"
-requires-python = ">=3.11"
-license = {file = "LICENSE"}
-dependencies = []
+requires-python = ">=3.14,<3.15"
+license = "MIT"
+dependencies = ["fastapi", "uvicorn", "httpx", "numpy"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.scripts]
+masklab = "masklab.__main__:main"
+
+[tool.setuptools.package-data]
+masklab = ["fixtures/*.json", "static/*", "static/assets/*", "static/brand/*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+
+asyncio_default_fixture_loop_scope = "function"

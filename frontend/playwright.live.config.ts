@@ -1,0 +1,3 @@
+// TASK-013 / TEST-009/024. Explicit opt-in only; default CI never runs this suite.
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'../tests/live-e2e',workers:1,timeout:90000,reporter:[['list'],['json',{outputFile:'../artifacts/live-verification/browser-live.json'}]],use:{baseURL:'http://127.0.0.1:8001',viewport:{width:1440,height:1000},trace:'off',screenshot:'only-on-failure'},webServer:[{command:'PYTHONPATH=src .venv/bin/python -m masklab serve --env-file .env --port 8001',cwd:'..',url:'http://127.0.0.1:8001/api/health',reuseExistingServer:true,timeout:30000},{command:'PYTHONPATH=src .venv/bin/python scripts/serve_live_demo.py',cwd:'..',url:'http://127.0.0.1:8767/api/health',reuseExistingServer:true,timeout:60000}]});

@@ -41,3 +41,10 @@ htmlcov/
 playwright-report/
 test-results/
 .acp/local/
+
+# Built React assets are produced from the locked frontend in local setup/CI.
+src/masklab/static/
+
+# All local dotenv variants may contain credentials; only the canonical empty template is source.
+.env*
+!.env.example
