@@ -1,0 +1,48 @@
+# TASK-014 / REQ-025. Manual publication only; no inference or automatic release creation.
+name: Publish static judge guide
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m venv .venv
+      - run: .venv/bin/pip install --require-hashes -r requirements-dev.lock
+      - run: npm ci --prefix frontend
+      - run: npm run build --prefix frontend
+      - run: .venv/bin/python -m build --wheel --no-isolation
+      - run: PYTHONPATH=src .venv/bin/python scripts/build_test_release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: masklab-test-build
+          path: |
+            artifacts/release/masklab-test-build.zip
+            artifacts/release/SHA256SUMS
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: artifacts/release/pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment
