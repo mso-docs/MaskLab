@@ -1,5 +1,9 @@
 # Submission readiness
 
+## Public static guide verified — 2026-10-29
+
+The operator made the repository public. The authorized source commit/push and Pages workflow succeeded: **https://mso-docs.github.io/MaskLab/** . Actual public-browser checks pass for evidence filters, invalid-response inspection, mobile layout and test-build download/checksum. Downloaded saved evidence passes standard import validation. Source: f776e43; Actions run41000069233. This supersedes the private-plan deployment blocker below. The site is a static guide with a runnable-test-build download, not hosted live inference. The walkthrough remains161.44 seconds and the release remains an unpublished draft: https://github.com/mso-docs/MaskLab/releases/tag/untagged-7945fb1c9d062452506c . Public YouTube upload, owner acceptance and submission are still pending.
+
 Operator authorized source commit/push and the Pages deployment on 2026-10-29, keeping the repository private. GitHub rejected Pages activation with HTTP422 because the current plan does not support Pages for this private repository. No deployment or visibility change occurred. The checked static bundle and private draft release remain available; choose an eligible account plan or separately authorize a public static-only repository to obtain the judge-facing URL.
 
 ## Reviewed local assets and private draft — 2026-10-29
