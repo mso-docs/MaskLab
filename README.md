@@ -2,6 +2,8 @@
 
 A local research workbench for measuring how answers change under independent persona and stated-belief conditions.
 
+[Demo and test build](https://mso-docs.github.io/MaskLab/) · [Video walkthrough](https://youtu.be/gmgJFIZNrYs) · [Devpost project](https://devpost.com/software/masklab)
+
 **Current status:** local implementation and live Nebius integration are verified. The selected NVIDIA model completed the default integration matrix plus two 4,050-request mixed-question studies. See the [first study](docs/MIXED_STUDY_RESULTS.md) and [fresh-question replication](docs/REPLICATION_V2_RESULTS.md). Simulated development remains separate from genuine live responses. **These convenience studies are not a validated scientific benchmark.** Owner acceptance, container-runtime verification and public release remain pending. See [verification](specs/001-initial-feature/verification.md) and [handoff](docs/HANDOFF.md).
 
 Create a study → import/version questions → configure roles × belief frames → preview every prompt and cost reservation → freeze → run a durable job → compare paired outcomes → inspect exact responses → export hash-verified evidence.

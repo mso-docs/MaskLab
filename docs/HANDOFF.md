@@ -1,5 +1,9 @@
 # Current handoff — 2026-10-27
 
+## Devpost project URL — 2026-10-30
+
+TASK-014 / REQ-025. Operator supplied https://devpost.com/software/masklab as the submission link. Added to the public guide, README, submission record and release notes under the continuing source/Pages authorization. The web tool could not access the Devpost page; no independent event-entry receipt or acceptance claim, and no external submission/edit performed. This link-only change does not alter scientific evidence, spending, test-build behavior or release publication. Docs/diff checks and required staged/history scans/hooks precede commit/push; hosted deployment and exact public-link verification receipt retained at artifacts/release/devpost-link-deployment.json.
+
 ## Foundation Actions failure repair — 2026-10-30
 
 Hosted verification complete on fix commit **4079ffa7d07b85dc156ddfaf1dbcee07c1d03219**: [Foundation checks](https://github.com/mso-docs/MaskLab/actions/runs/41050800639) SUCCESS and [full Local correctness and security](https://github.com/mso-docs/MaskLab/actions/runs/41050800876) SUCCESS, including the unchanged full Python/browser/evaluation/security pipeline. receipts: artifacts/ci-repair/hosted-results.json and hosted-{foundation,full}-results.json. Commit/push exit0; explicit staged scan148 objects clean, explicit/pre-push history scan176 objects clean; all installed hooks enabled. Historical failed runs retained.

@@ -1,5 +1,9 @@
 # Submission readiness
 
+## Devpost project link supplied — 2026-10-30
+
+TASK-014 / REQ-025. Operator supplied **https://devpost.com/software/masklab** as the submission link. Recorded alongside the [demo](https://mso-docs.github.io/MaskLab/) and [walkthrough](https://youtu.be/gmgJFIZNrYs), and linked from the static guide. The web tool could not access the Devpost page; event-entry receipt, eligibility review and acceptance are not independently asserted. No entry was submitted or edited by the agent. Earlier pending-submission notes are historical; this records the operator-provided project URL without inferring judging status.
+
 ## YouTube link supplied — 2026-10-30
 
 TASK-014 / REQ-025. Operator supplied the walkthrough URL: **https://youtu.be/gmgJFIZNrYs** . Added to the static guide and release notes. The locally verified recording is 161.44 seconds; the uploaded video’s visibility, duration and playback were not independently established by the web fetch (cache miss). Confirm YouTube visibility is Public before final submission. This supersedes earlier upload-pending statements only as evidence that the operator supplied an uploaded-video link; it does not mark owner acceptance or submission complete.

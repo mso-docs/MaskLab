@@ -11,3 +11,5 @@ Verify the ZIP against SHA256SUMS. BUILD.json records exact evidence provenance 
 The captioned walkthrough shows the actual app and remains under three minutes. It has no spoken audio. Source package version is 0.1.0.dev0; 0.1.0-rc1 identifies this release bundle. No public hosted live inference service is included.
 
 Walkthrough supplied by the operator: https://youtu.be/gmgJFIZNrYs .
+
+Devpost project supplied by the operator: https://devpost.com/software/masklab .
