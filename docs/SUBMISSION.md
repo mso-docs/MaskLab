@@ -1,5 +1,9 @@
 # Submission readiness
 
+## YouTube link supplied — 2026-10-30
+
+TASK-014 / REQ-025. Operator supplied the walkthrough URL: **https://youtu.be/gmgJFIZNrYs** . Added to the static guide and release notes. The locally verified recording is 161.44 seconds; the uploaded video’s visibility, duration and playback were not independently established by the web fetch (cache miss). Confirm YouTube visibility is Public before final submission. This supersedes earlier upload-pending statements only as evidence that the operator supplied an uploaded-video link; it does not mark owner acceptance or submission complete.
+
 ## Public static guide verified — 2026-10-29
 
 The operator made the repository public. The authorized source commit/push and Pages workflow succeeded: **https://mso-docs.github.io/MaskLab/** . Actual public-browser checks pass for evidence filters, invalid-response inspection, mobile layout and test-build download/checksum. Downloaded saved evidence passes standard import validation. Source: f776e43; Actions run41000069233. This supersedes the private-plan deployment blocker below. The site is a static guide with a runnable-test-build download, not hosted live inference. The walkthrough remains161.44 seconds and the release remains an unpublished draft: https://github.com/mso-docs/MaskLab/releases/tag/untagged-7945fb1c9d062452506c . Public YouTube upload, owner acceptance and submission are still pending.

@@ -1,5 +1,9 @@
 # Current handoff — 2026-10-27
 
+## YouTube walkthrough link — 2026-10-30
+
+TASK-014 / REQ-025. Operator supplied https://youtu.be/gmgJFIZNrYs . Linked from the static Pages guide, submission record and release notes under the continuing source push/Pages authorization. No video upload or release publication performed by the agent. Web fetch returned cache miss, so uploaded duration/playback/Public visibility are not independently claimed; local video duration remains verified at 161.44 seconds. No inference, ledger changes, owner acceptance or external submission. Deployment evidence is retained in artifacts/release/youtube-link-deployment.json after workflow verification.
+
 ## Public static Pages delivery verified — 2026-10-29
 
 TASK-014 → REQ-017–020/023–025. Operator authorized commit/push/deployment, then independently changed the repository to PUBLIC and reported that change. Read-only GitHub API confirmed private=false. The earlier HTTP422 private-plan limitation is superseded. A subsequent create-Pages request returned409/already enabled; actual configuration confirms build_type=workflow. No agent-initiated visibility change or account upgrade occurred.

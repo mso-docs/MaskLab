@@ -9,3 +9,5 @@ Download `masklab-test-build.zip`, extract it and follow README.txt. Python 3.14
 Verify the ZIP against SHA256SUMS. BUILD.json records exact evidence provenance and the frozen protocol hash. The saved archive has an import-compatible derivative wrapper around unchanged approved public payloads; the original public derivative is retained separately. Software is MIT; GSM8K MIT and adapted CMU S10 CC BY-SA 3.0 notices remain distinct.
 
 The captioned walkthrough shows the actual app and remains under three minutes. It has no spoken audio. Source package version is 0.1.0.dev0; 0.1.0-rc1 identifies this release bundle. No public hosted live inference service is included.
+
+Walkthrough supplied by the operator: https://youtu.be/gmgJFIZNrYs .
