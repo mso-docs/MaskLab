@@ -1,5 +1,11 @@
 # Current handoff — 2026-10-27
 
+## Judge getting-started help — 2026-10-30
+
+TASK-014 → REQ-002/023/025. Operator requested discoverable judge build/setup help. Expanded the existing static install section into Getting started & help, linked from navigation and hero, preserving the old #install anchor and adding #getting-started. Includes Python 3.14 prerequisites/version checks, existing platform-specific locked install/start commands, first-five-minutes real-evidence/simulated-workflow/export walkthrough, restart and alternate-port commands, keyboard-operable troubleshooting and source-build README link. Corrected the first-use control name to the visible “Inspect archive saved-pu…” button. Linux verified / Windows and macOS unverified labels retained. No runtime/scientific/budget changes or fresh inference.
+
+Local Chromium verification exit0: navigation and direct mobile anchor place the heading in viewport, platform commands/hash flags present, keyboard FAQ opens, no horizontal overflow at390px and no page errors; artifacts/judge-help-verification.json plus help-{desktop,mobile}.png (visually inspected). Initial screenshots were taken before smooth scrolling settled; corrected by asserting the heading is actually in viewport and capturing again. Docs/diff checks exit0. Required staged/history scans and enabled hooks precede commit/push; publication receipt retained at artifacts/judge-help-deployment.json after actual successful Pages deployment.
+
 ## Devpost project URL — 2026-10-30
 
 TASK-014 / REQ-025. Operator supplied https://devpost.com/software/masklab as the submission link. Added to the public guide, README, submission record and release notes under the continuing source/Pages authorization. The web tool could not access the Devpost page; no independent event-entry receipt or acceptance claim, and no external submission/edit performed. This link-only change does not alter scientific evidence, spending, test-build behavior or release publication. Docs/diff checks and required staged/history scans/hooks precede commit/push; hosted deployment and exact public-link verification receipt retained at artifacts/release/devpost-link-deployment.json.
