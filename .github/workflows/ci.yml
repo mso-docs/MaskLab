@@ -1,3 +1,4 @@
+# TASK-012 / REQ-024: dependency-free reference fixtures; full app suite is in checks.yml.
 name: Foundation checks
 on:
   push:
@@ -6,13 +7,14 @@ permissions:
   contents: read
 jobs:
   fixtures:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      - run: python -m unittest discover -s tests -v
+          python-version: "3.14"
+      - name: Independently calculated reference fixtures (stdlib only)
+        run: python -I -S -m unittest discover -s tests -p 'test_research_fixtures.py' -v
       - run: python -m compileall -q src
-# No publication, cloud deployment or paid inference. Full application checks
-# and a pinned independent Gitleaks CI installation are implementation tasks.
+# No publication, cloud deployment or paid inference. checks.yml runs every pytest
+# test plus browser journeys, independent export evaluation and Gitleaks.

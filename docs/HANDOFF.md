@@ -1,5 +1,13 @@
 # Current handoff — 2026-10-27
 
+## Foundation Actions failure repair — 2026-10-30
+
+TASK-012 → REQ-023/024. Operator reported recurring failing Actions. Actual recent runs show only **Foundation checks** failing; full Local correctness and security and Pages workflows succeeded on the same commits. Failed run41004787570/job123897110421 confirms unscoped unittest discovery imports eight pytest-based application test modules without pytest installed (ModuleNotFoundError). Initial `gh run view --log-failed` returned empty text; raw job logs retrieved through the job/logs API and retained at artifacts/ci-repair/failed-foundation-job.log. Host approval review timed out on initial read; the explicitly permitted single retry succeeded. No bypass or policy change.
+
+Reproduced in a dependency-free interpreter: `python3 -I -S -m unittest discover -s tests -v` exit1, three fixture tests plus eight module-import errors; artifacts/ci-repair/unscoped-unittest.log. Fixed .github/workflows/ci.yml to use Python3.14/Ubuntu24.04 and discover only test_research_fixtures.py. This preserves the independent standard-library reference checks, while unchanged checks.yml still installs locked dependencies and runs the entire pytest suite, browser journeys, independent export evaluation and Gitleaks. No test, key, scorer or scientific protocol changed; no application tests removed or suppressed.
+
+Validation: `python3 -I -S -m unittest discover -s tests -p 'test_research_fixtures.py' -v` exit0, all three independent reference tests pass (artifacts/ci-repair/reference-fixtures.log); `python3 -m compileall -q src` exit0; `.venv/bin/python scripts/check_docs.py` exit0; `git diff --check` exit0. Required staged/history scans and enabled hooks precede the authorized commit/push. Actual new hosted CI results will be retained in artifacts/ci-repair/hosted-results.json; no hosted success is claimed before that receipt. Existing failed run history remains intact. No inference, Pages redeployment, release publication or submission.
+
 ## YouTube walkthrough link — 2026-10-30
 
 TASK-014 / REQ-025. Operator supplied https://youtu.be/gmgJFIZNrYs . Linked from the static Pages guide, submission record and release notes under the continuing source push/Pages authorization. No video upload or release publication performed by the agent. Web fetch returned cache miss, so uploaded duration/playback/Public visibility are not independently claimed; local video duration remains verified at 161.44 seconds. No inference, ledger changes, owner acceptance or external submission. Deployment evidence is retained in artifacts/release/youtube-link-deployment.json after workflow verification.
